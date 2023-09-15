@@ -1,0 +1,12 @@
+C:\Users\Женя\source\repos\project1\project1\bin\Debug\project1.exe.config
+C:\Users\Женя\source\repos\project1\project1\bin\Debug\project1.exe
+C:\Users\Женя\source\repos\project1\project1\bin\Debug\project1.pdb
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.csproj.AssemblyReference.cache
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.Form1.resources
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.Properties.Resources.resources
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.csproj.GenerateResource.cache
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.csproj.CoreCompileInputs.cache
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.exe
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.pdb
+C:\Users\Женя\source\repos\project1\project1\obj\Debug\project1.Form2.resources

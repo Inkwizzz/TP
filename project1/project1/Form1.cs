@@ -28,6 +28,7 @@ namespace project1
             else
             {
                 //Сохраняем остаток
+		//some code
                 int money = 333;
             }
         }

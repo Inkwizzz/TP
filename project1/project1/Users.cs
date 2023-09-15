@@ -8,7 +8,8 @@ namespace project1
 {
     public class Users
     {
-        string user = "";
+        //some code added by me
+	string user = "";
         public string get_user()
         {
             return user;

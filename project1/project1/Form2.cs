@@ -13,22 +13,31 @@ namespace project1
 {
     public partial class Form2 : Form
     {
-        Users u = new Users();
-        string FN = @"C:\Games\555.txt";
+        Users u;
+        //Путь к файлу
+        string FN = "";
         public Form2(Users u)
         {
             this.u = u;
             InitializeComponent();
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
+        //Авторизация
+        private void Authorization_button_Click(object sender, EventArgs e)
+        {
+            string Login = textBox1.Text;
+            string Pas = textBox2.Text;
+            //Проверяем логин и пароль
+            u.set_user(textBox1.Text);
+            Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        //Регистрация
+        private void Registration_button_Click(object sender, EventArgs e)
         {
-            //468456845684
+            string Login = textBox1.Text;
+            string Pas = textBox2.Text;
         }
     }
 }

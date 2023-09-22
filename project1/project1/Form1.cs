@@ -12,76 +12,71 @@ namespace project1
 {
     public partial class Form1 : Form
     {
-        string FN = "";
+        string FN = ""; //Путь к файлу
+        Users u = new Users();
         public Form1()
         {
-
-            Users u = new Users();
+            //Полуаем данные из авторизации, 
             Form2 newform = new Form2(u);
             newform.ShowDialog();
             string us = u.get_user();
+
+
+            //Если не был введён логин, то и второе окно сразу закрывается
+            if(us == "")
+            {
+                Close();
+            }
             FN = @"C:\Games\"+us+".txt";
             InitializeComponent();
+
+
             if(DateTime.Now.Month == 1/*file Month*/)
             {
             }
             else
             {
-                //Сохраняем остаток
-                int money = 333;
+                //Полуаем остаток, а затем добавляем в файл
+                add_money(333,"Остаток с прошлого месяца");
             }
         }
         private int change_int = 0;
-        private void button4_Click(object sender, EventArgs e)
+        private void add_money(int sum,string text)
         {
-            MessageBox.Show("*Жесткое описание работы программы*");
+            //Добавляем в файл
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void Decrease_money_button_Click(object sender, EventArgs e)
         {
-            bool a = true;
+            Money_operation(-1);
+        }
+
+        //Работа с введенными данными (Добавить или убавить)
+        private void Money_operation(int Add)
+        {
             int sum = 0;
             string text = "";
             try
             {
                 text = textBox1.Text;
-                sum = Convert.ToInt32(textBox2.Text);
+                sum = Add*Convert.ToInt32(textBox2.Text);
+                add_money(sum, text);
             }
-            catch {
-                a = false;
-                MessageBox.Show("Вы неправильно ввели данные");
-
-            }
-            add_money(a, sum, text);
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            bool a = true;
-            int sum = 0;
-            string text = "";
-            try
+            catch
             {
-                text = textBox1.Text;
-                sum = -Convert.ToInt32(textBox2.Text);
-            }
-            catch {
-                a = false;
                 MessageBox.Show("Вы неправильно ввели данные");
             }
-            add_money(a, sum, text);
-        }
-        private void add_money(bool a, int sum,string text)
-        {
-            if(a)
-            {
-                
-            }
-            else{}
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Add_money_button_Click(object sender, EventArgs e)
         {
+            Money_operation(1);
+        }
+
+        //Отображение трат
+        private void Display_button_Click(object sender, EventArgs e)
+        {
+
 
             if (change_int == 2)
             {
@@ -95,14 +90,18 @@ namespace project1
                 change_int = 2;
 
             }
-            else if (change_int == 0) {
+            else if (change_int == 0)
+            {
                 listBox1.Visible = true;
                 change_int = 1;
 
 
             }
+        }
 
+        private void faq_button_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("*Жесткое описание работы программы*");
         }
     }
-    //Арсений не лох
 }

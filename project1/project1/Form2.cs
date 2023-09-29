@@ -17,7 +17,6 @@ namespace project1
         Users u = new Users();
         //Т.к. все в отладке, то файл выбираем через диалоговое окно
         string fileName, fileString;// = @"C:\Games\555.txt";
-
         public Form2(Users u)
         {
             this.u = u;
@@ -64,7 +63,7 @@ namespace project1
                 }
         }
         //Регистрация
-        private void button2_Click(object sender, EventArgs e)
+        private void Registration_button_Click(object sender, EventArgs e)
         {
             PickFile();
             SplitString(fileString);
@@ -76,10 +75,15 @@ namespace project1
             {
 
             }
+        //Авторизация
+        private void Authorization_button_Click(object sender, EventArgs e)
+        {
+            string Login = textBox1.Text;
+            string Pas = textBox2.Text;
+            //Проверяем логин и пароль
+            u.set_user(textBox1.Text);
+            Close();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-        }
     }
 }

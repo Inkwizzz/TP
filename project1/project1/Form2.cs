@@ -24,13 +24,32 @@ namespace project1
             InitializeComponent();
         }
         //Проверка на существования пользователя
-        private bool IfReg(String[] fileContent, string username)
+        private bool IfReg(/*String[] fileContent,*/ string username)
         {
             if (fileContent.Contains(username)) return true;
             else return false;
         }
-        //Регистрация
-        private void button2_Click(object sender, EventArgs e)
+        private void SearchAndMatch(string login) 
+        {
+            
+        }
+        //Вынес разбиение строк из файла в отдельный метод
+        private void SplitString(string str)
+        {
+            //Я не придумал, как убрать \r\n, поэтому я сделал сплит по \r и через цикл вручную удалил \n
+            fileContent = fileString.Split('\n');
+            for (int i = 0; i < fileContent.Length; i++)
+            {
+                int len = fileContent[i].Length;
+                if (fileContent[i][len - 1] == '\r')
+                {
+                    fileContent[i] = fileContent[i].Substring(0, len - 1);
+                }
+
+            }
+        }
+        //Выбор файла с логинами и паролями тоже вынес в отдельный метод
+        private void PickFile()
         {
             // Здесь считывается имя и содержание из файла в строку
             using (OpenFileDialog ofd = new OpenFileDialog())
@@ -43,24 +62,20 @@ namespace project1
                         fileString = reader.ReadToEnd();
                     }
                 }
-            //Я не придумал, как убрать \r\n, поэтому я сделал сплит по \r и через цикл вручную удалил \n
-            fileContent = fileString.Split('\n');
-            for (int i = 0; i < fileContent.Length; i++)
+        }
+        //Регистрация
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PickFile();
+            SplitString(fileString);
+            if (IfReg(textBox1.Text))
             {
-                int len = fileContent[i].Length;
-                if (fileContent[i][len - 1] == '\r')
-                {
-                    fileContent[i] = fileContent[i].Substring(0, len - 1);
-                }
 
             }
-            //foreach (var c in fileContent)
-            //{
-            //    if (c[len - 1].Equals('\r'))
-            //    {
-            //        c = c.Substring(0, len - 2);
-            //    }
-            //}
+            else
+            {
+
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

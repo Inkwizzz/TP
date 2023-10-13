@@ -23,12 +23,12 @@ namespace project1
 
 
             //Если не был введён логин, то и второе окно сразу закрывается
-            if(us == "")
-            {
-                Close();
-            }
-            FN = @"C:\Games\"+us+".txt";
             InitializeComponent();
+            //if (us == "")
+            //{
+               // Close();
+           // }
+            FN = @"C:\Games\"+us+".txt";
 
 
             if(DateTime.Now.Month == 1/*file Month*/)
@@ -36,7 +36,7 @@ namespace project1
             }
             else
             {
-                //Полуаем остаток, а затем добавляем в файл
+                //Получаем остаток, а затем добавляем в файл
                 add_money(333,"Остаток с прошлого месяца");
             }
         }
@@ -58,8 +58,8 @@ namespace project1
             string text = "";
             try
             {
-                text = textBox1.Text;
-                sum = Add*Convert.ToInt32(textBox2.Text);
+                text = Namebox.Text;
+                sum = Add*Convert.ToInt32(sumbox.Text);
                 add_money(sum, text);
             }
             catch
@@ -104,4 +104,5 @@ namespace project1
             MessageBox.Show("*Жесткое описание работы программы*");
         }
     }
+
 }

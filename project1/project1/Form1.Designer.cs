@@ -28,12 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Add_money_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.Namebox = new System.Windows.Forms.TextBox();
+            this.sumbox = new System.Windows.Forms.TextBox();
             this.Decrease_money_button = new System.Windows.Forms.Button();
             this.Display_button = new System.Windows.Forms.Button();
             this.faq_button = new System.Windows.Forms.Button();
@@ -57,21 +57,21 @@
             this.Add_money_button.UseVisualStyleBackColor = false;
             this.Add_money_button.Click += new System.EventHandler(this.Add_money_button_Click);
             // 
-            // textBox1
+            // Namebox
             // 
-            this.textBox1.Location = new System.Drawing.Point(187, 428);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 22);
-            this.textBox1.TabIndex = 1;
-            this.textBox1.Text = "Название";
+            this.Namebox.Location = new System.Drawing.Point(187, 428);
+            this.Namebox.Name = "Namebox";
+            this.Namebox.Size = new System.Drawing.Size(164, 22);
+            this.Namebox.TabIndex = 1;
+            this.Namebox.Text = "Название";
             // 
-            // textBox2
+            // sumbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(357, 428);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(114, 22);
-            this.textBox2.TabIndex = 2;
-            this.textBox2.Text = "Сумма";
+            this.sumbox.Location = new System.Drawing.Point(357, 428);
+            this.sumbox.Name = "sumbox";
+            this.sumbox.Size = new System.Drawing.Size(114, 22);
+            this.sumbox.TabIndex = 2;
+            this.sumbox.Text = "Сумма";
             // 
             // Decrease_money_button
             // 
@@ -123,17 +123,17 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
+            chartArea1.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea1);
             this.chart1.Enabled = false;
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            legend1.Name = "Legend1";
+            this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(45, 32);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series1.ChartArea = "ChartArea1";
+            series1.Legend = "Legend1";
+            series1.Name = "Series1";
+            this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(566, 354);
             this.chart1.TabIndex = 6;
             this.chart1.Text = "хз";
@@ -159,8 +159,8 @@
             this.Controls.Add(this.faq_button);
             this.Controls.Add(this.Display_button);
             this.Controls.Add(this.Decrease_money_button);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.sumbox);
+            this.Controls.Add(this.Namebox);
             this.Controls.Add(this.Add_money_button);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Form1";
@@ -175,8 +175,8 @@
         #endregion
 
         private System.Windows.Forms.Button Add_money_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox Namebox;
+        private System.Windows.Forms.TextBox sumbox;
         private System.Windows.Forms.Button Decrease_money_button;
         private System.Windows.Forms.Button Display_button;
         private System.Windows.Forms.Button faq_button;

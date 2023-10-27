@@ -25,7 +25,7 @@ namespace project1
             //Если не был введён логин, то и второе окно сразу закрывается
             if(us == "")
             {
-                Close();
+                Environment.Exit(0);
             }
             FN = @"C:\Games\"+us+".txt";
             InitializeComponent();

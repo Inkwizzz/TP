@@ -30,14 +30,13 @@
         {
             this.Authorization_button = new System.Windows.Forms.Button();
             this.Registration_button = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.loginTextBox = new System.Windows.Forms.TextBox();
+            this.passwordTextBox = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Authorization_button
             // 
-
             this.Authorization_button.Location = new System.Drawing.Point(82, 298);
             this.Authorization_button.Name = "Authorization_button";
             this.Authorization_button.Size = new System.Drawing.Size(196, 23);
@@ -48,7 +47,6 @@
             // 
             // Registration_button
             // 
-
             this.Registration_button.Location = new System.Drawing.Point(82, 327);
             this.Registration_button.Name = "Registration_button";
             this.Registration_button.Size = new System.Drawing.Size(196, 23);
@@ -57,21 +55,21 @@
             this.Registration_button.UseVisualStyleBackColor = true;
             this.Registration_button.Click += new System.EventHandler(this.Registration_button_Click);
             // 
-            // textBox1
+            // loginTextBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(62, 158);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 20);
-            this.textBox1.TabIndex = 2;
+            this.loginTextBox.Location = new System.Drawing.Point(62, 158);
+            this.loginTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.loginTextBox.Name = "loginTextBox";
+            this.loginTextBox.Size = new System.Drawing.Size(148, 20);
+            this.loginTextBox.TabIndex = 2;
             // 
-            // textBox2
+            // passwordTextBox
             // 
-            this.textBox2.Location = new System.Drawing.Point(62, 181);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 20);
-            this.textBox2.TabIndex = 3;
+            this.passwordTextBox.Location = new System.Drawing.Point(62, 181);
+            this.passwordTextBox.Margin = new System.Windows.Forms.Padding(2);
+            this.passwordTextBox.Name = "passwordTextBox";
+            this.passwordTextBox.Size = new System.Drawing.Size(148, 20);
+            this.passwordTextBox.TabIndex = 3;
             // 
             // label1
             // 
@@ -87,9 +85,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(274, 349);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
-
+            this.Controls.Add(this.passwordTextBox);
+            this.Controls.Add(this.loginTextBox);
             this.Controls.Add(this.Registration_button);
             this.Controls.Add(this.Authorization_button);
             this.Name = "Form2";
@@ -103,8 +100,8 @@
 
         private System.Windows.Forms.Button Authorization_button;
         private System.Windows.Forms.Button Registration_button;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox loginTextBox;
+        private System.Windows.Forms.TextBox passwordTextBox;
         private System.Windows.Forms.Label label1;
     }
 }

@@ -13,10 +13,10 @@ namespace project1
 {
     public partial class Form2 : Form
     {
-        string[] fileContent;
-        Users u = new Users();
+        private string[] fileContent;
+        private Users u = new Users();
         //Т.к. все в отладке, то файл выбираем через диалоговое окно
-        string fileName, fileString;// = @"C:\Games\555.txt";
+        private string fileName, fileString;// = @"C:\Games\555.txt";
         public Form2(Users u)
         {
             this.u = u;
@@ -28,9 +28,10 @@ namespace project1
             if (fileContent.Contains(username)) return true;
             else return false;
         }
-        private void SearchAndMatch(string login) 
+        //Поиск пароля по логину
+        private string SearchAndMatch(string login) 
         {
-            
+            return null;
         }
         //Вынес разбиение строк из файла в отдельный метод
         private void SplitString(string str)
@@ -60,6 +61,7 @@ namespace project1
                     {
                         fileString = reader.ReadToEnd();
                     }
+                    fileStream.Close();
                 }
         }
         //Регистрация
@@ -67,21 +69,31 @@ namespace project1
         {
             PickFile();
             SplitString(fileString);
-            if (IfReg(textBox1.Text))
+            if (IfReg(loginTextBox.Text))
             {
-
+                label1.Text = "Данный пользователь уже существует";
             }
             else
             {
-
+                using (StreamWriter writer = new StreamWriter(fileName))
+                {
+                    //Когда будет будет второе окно для регистрации, доделаю
+                }
             }
+        }
         //Авторизация
         private void Authorization_button_Click(object sender, EventArgs e)
         {
-            string Login = textBox1.Text;
-            string Pas = textBox2.Text;
+            string login = loginTextBox.Text;
+            string pass;
+            if (IfReg(loginTextBox.Text))
+            {
+                pass = SearchAndMatch(loginTextBox.Text);
+                if (pass == passwordTextBox.Text) 
+                    u.set_user(loginTextBox.Text);
+
+            }
             //Проверяем логин и пароль
-            u.set_user(textBox1.Text);
             Close();
         }
 

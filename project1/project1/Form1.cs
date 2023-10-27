@@ -26,6 +26,7 @@ namespace project1
             if(us == "")
             {
                 Environment.Exit(0);
+                MessageBox.Show("Логин не был введен");
             }
             FN = @"C:\Games\"+us+".txt";
             InitializeComponent();

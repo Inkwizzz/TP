@@ -84,6 +84,8 @@ namespace project1
         //Авторизация
         private void Authorization_button_Click(object sender, EventArgs e)
         {
+            PickFile();
+            SplitString(fileString);
             string login = loginTextBox.Text;
             string pass;
             if (IfReg(loginTextBox.Text))
@@ -93,6 +95,7 @@ namespace project1
                     u.set_user(loginTextBox.Text);
 
             }
+            u.set_user(login);
             //Проверяем логин и пароль
             Close();
         }
